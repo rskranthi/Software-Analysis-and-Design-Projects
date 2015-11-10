@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/VendingMachine/src" modelPluginID="VendingMachine"
+    modelName="Vm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>VM_KranthiRekala.ecore</foreignModel>
+  <genPackages prefix="VM_KranthiRekala" disposableProviderFactory="true" ecorePackage="VM_KranthiRekala.ecore#/">
+    <nestedGenPackages prefix="Vendsys" basePackage="VM_KranthiRekala" disposableProviderFactory="true"
+        ecorePackage="VM_KranthiRekala.ecore#//vendsys">
+      <genClasses image="false" ecoreClass="VM_KranthiRekala.ecore#//vendsys/IPayMachineListener">
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IPayMachineListener/returnChange">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/IPayMachineListener/returnChange/iNumQuarters"/>
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/IPayMachineListener/returnChange/iNumDimes"/>
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/IPayMachineListener/returnChange/iNumNickels"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IPayMachineListener/balanceUpdated">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/IPayMachineListener/balanceUpdated/dBalance"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="VM_KranthiRekala.ecore#//vendsys/IProductDatabase">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/IProductDatabase/product"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/IProductDatabase/realizes"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductDatabase/getProducts"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductDatabase/decrementQuantity"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="VM_KranthiRekala.ecore#//vendsys/IProductInfo">
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductInfo/getID"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductInfo/getName"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductInfo/getDescription"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductInfo/getIcon"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductInfo/getPrice"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductInfo/getQuantity"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="VM_KranthiRekala.ecore#//vendsys/IProductDispenserListener">
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductDispenserListener/dispenseProduct">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/IProductDispenserListener/dispenseProduct/piProduct"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="VM_KranthiRekala.ecore#//vendsys/IProductSelectorListener">
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductSelectorListener/updateDisplay">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/IProductSelectorListener/updateDisplay/piProducts"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductSelectorListener/itemSelected">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/IProductSelectorListener/itemSelected/piProduct"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IProductSelectorListener/itemDeselected">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/IProductSelectorListener/itemDeselected/piProduct"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="VM_KranthiRekala.ecore#//vendsys/IOutputDisplayListener">
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/IOutputDisplayListener/updateDisplay">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/IOutputDisplayListener/updateDisplay/sData"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//vendsys/CashRegister">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/CashRegister/m_iNumQuarters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/CashRegister/m_iNumDimes"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/CashRegister/m_iNumNickels"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/CashRegister/m_iNumDollars"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/CashRegister/m_alReceipts"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/CashRegister/CashRegister"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/CashRegister/maximumChange"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/CashRegister/addDollars">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/CashRegister/addDollars/count"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/CashRegister/addQuarters">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/CashRegister/addQuarters/count"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/CashRegister/addDimes">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/CashRegister/addDimes/count"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/CashRegister/addNickels">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/CashRegister/addNickels/count"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/CashRegister/addReceipt"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/CashRegister/takeOutChange">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/CashRegister/takeOutChange/dAmount"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//vendsys/OutputDisplay">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/OutputDisplay/m_sCurrentOutput"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/OutputDisplay/m_odlListener"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/OutputDisplay/displayString">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/OutputDisplay/displayString/sData"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/OutputDisplay/setOutputDisplayListener">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/OutputDisplay/setOutputDisplayListener/odlListener"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//vendsys/PayMachine">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/PayMachine/m_dMaximumBalance"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/PayMachine/m_dBalance"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/PayMachine/m_bOutOfOrder"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/PayMachine/m_pmlListener"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/PayMachine/m_crRegister"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/PayMachine/m_vvmOwner"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/PayMachine">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/PayMachine/PayMachine/vvmOwner"/>
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/PayMachine/PayMachine/dMaximumBalance"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/setPayMachineListener">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/PayMachine/setPayMachineListener/pmlListener"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/getBalance"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/insertQuarter"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/insertDime"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/insertNickel"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/insertDollar"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/insertSuncard">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/PayMachine/insertSuncard/iAccount"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/returnChange"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/deductBalance">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/PayMachine/deductBalance/dAmount"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/PayMachine/clearBalance"/>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/m_bOutOfOrder"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/m_pdProducts"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/m_odOutputDisplay"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/m_pdDispenser"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/m_pmPayMachine"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/m_psProductSelector"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/VirtualVendingMachine">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/VirtualVendingMachine/pdProducts"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/getProducts"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/getProductSelector"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/getOutputDisplay"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/getPayMachine"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/getProductDispenser"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/showProductDesc">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/showProductDesc/piProduct"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/buyItem">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/buyItem/piProduct"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/VirtualVendingMachine/goOutOfOrder"/>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//vendsys/ProductDispenser">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/ProductDispenser/m_pdlListener"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/ProductDispenser/dispenseProduct">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/ProductDispenser/dispenseProduct/piProduct"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/ProductDispenser/setProductDispenserListener">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/ProductDispenser/setProductDispenserListener/pdlListener"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//vendsys/ProductSelector">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/ProductSelector/m_pslListener"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/ProductSelector/m_piSelectedItem"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/ProductSelector/m_vvmMachine"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/ProductSelector/ProductSelector">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/ProductSelector/ProductSelector/vvmMachine"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/ProductSelector/displayProducts"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/ProductSelector/setProductSelectorListener">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/ProductSelector/setProductSelectorListener/pslListener"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/ProductSelector/showProductDesc">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/ProductSelector/showProductDesc/piProduct"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/ProductSelector/buyItem">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/ProductSelector/buyItem/piProduct"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/ProductSelector/setSelectedItem">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/ProductSelector/setSelectedItem/piProduct"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//vendsys/SuncardReceipt">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/SuncardReceipt/m_iAccount"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/SuncardReceipt/m_dAmountDeducted"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/SuncardReceipt/SuncardReceipt">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/SuncardReceipt/SuncardReceipt/iAccount"/>
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//vendsys/SuncardReceipt/SuncardReceipt/dAmountDeducted"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/SuncardReceipt/getAccount"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//vendsys/SuncardReceipt/getAmountDeducted"/>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//vendsys/CoinCount">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/CoinCount/NUM_QUARTERS"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/CoinCount/NUM_DIMES"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//vendsys/CoinCount/NUM_NICKELS"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//vendsys/CoinCount/coins"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Extern" basePackage="VM_KranthiRekala" disposableProviderFactory="true"
+        ecorePackage="VM_KranthiRekala.ecore#//extern">
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//extern/Product">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//extern/Product/m_iID"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//extern/Product/m_sName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//extern/Product/m_sDescription"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//extern/Product/m_dPrice"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VM_KranthiRekala.ecore#//extern/Product/m_iQuantity"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//extern/Product/Product">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//extern/Product/Product/iID"/>
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//extern/Product/Product/sName"/>
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//extern/Product/Product/sDescription"/>
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//extern/Product/Product/iICon"/>
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//extern/Product/Product/dPrice"/>
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//extern/Product/Product/iQuantity"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//extern/MyProductDatabase">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VM_KranthiRekala.ecore#//extern/MyProductDatabase/pProducts"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//extern/MyProductDatabase/MyProductDatabase"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//extern/MyProductDatabase/getProducts"/>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//extern/MyProductDatabase/decrementQuantity">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//extern/MyProductDatabase/decrementQuantity/piProduct"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//extern/MyProductDatabase/getProduct">
+          <genParameters ecoreParameter="VM_KranthiRekala.ecore#//extern/MyProductDatabase/getProduct/iProductID"/>
+        </genOperations>
+        <genOperations ecoreOperation="VM_KranthiRekala.ecore#//extern/MyProductDatabase/getNumProducts"/>
+      </genClasses>
+      <genClasses ecoreClass="VM_KranthiRekala.ecore#//extern/Icon"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
